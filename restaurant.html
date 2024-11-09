@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;  
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    li{
+      list-style: none;
+      display: inline;
+      padding: 16px;
+    }
+    #div2{
+      margin-left: 60%;
+      margin-top: -1.75%;
+    }
+    #div1{
+      margin-left: 5%;
+      margin-top: 15px;
+      font-size: 30px;
+    }
+    #Main{
+      border: 1px solid gainsboro;
+      height: 70px;
+      background-color: gainsboro;
+    }
+    .menu-container {
+      width: 80%;
+      max-width: 800px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-left: 25%;
+      margin-top: 3%;
+    }
+    .menu-title {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .menu-section {
+      margin-bottom: 30px;
+    }
+    .menu-section h2 {
+      font-size: 1.5em;
+      color: #d2691e;
+      border-bottom: 2px solid #d2691e;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+    .menu-item {
+      display: flex;
+      align-items: center;
+      
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      
+    }
+    .menu-item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      margin-right: 15px;
+    }
+    .menu-item img:hover {
+      transform: scale(1.1);
+    }
+    .item-details {
+      flex-grow: 1;
+    }
+    .item-name {
+      font-weight: bold;
+    }
+    .item-price {
+      color: #d2691e;
+    }
+  </style>
+</head>
+<body>
+  <div id="Main">
+    <div id="div1">SkyDeck</div>
+    <div id="div2">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="room.html">Rooms</a></li>
+      <li><a href="#">Restaurant</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </div>
+  </div>
+  
+  <div class="menu-container">
+    <div class="menu-title">Our Menu</div>
+
+    <div class="menu-section">
+      <h2>Breakfast</h2>
+      <div class="menu-item">
+        <img src="image/fast1.jpg" alt="Bruschetta">
+        <div class="item-details">
+          <div class="item-name">Sandwich</div>
+        </div>
+        <div class="item-price">120/-</div>
+      </div>
+      <div class="menu-item">
+        <img src="image/fast2.jpg" alt="Stuffed Mushrooms">
+        <div class="item-details">
+          <div class="item-name">Alo Paratha</div>
+        </div>
+        <div class="item-price">90/-</div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2>Main Courses</h2>
+      <div class="menu-item">
+        <img src="image/p1.jpg" alt="Grilled Salmon">
+        <div class="item-details">
+          <div class="item-name">Chilli Paneer</div>
+        </div>
+        <div class="item-price">180/-</div>
+      </div>
+      <div class="menu-item">
+        <img src="image/p2.png" alt="Pasta Primavera">
+        <div class="item-details">
+          <div class="item-name">Spicy Pasta</div>
+        </div>
+        <div class="item-price">160/-</div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2>Desserts</h2>
+      <div class="menu-item">
+        <img src="image/c1.jpg" alt="Cheesecake">
+        <div class="item-details">
+          <div class="item-name">Cheesecake</div>
+        </div>
+        <div class="item-price">120/-</div>
+      </div>
+      <div class="menu-item">
+        <img src="image/c2.jpg" alt="Chocolate Mousse">
+        <div class="item-details">
+          <div class="item-name">Pancake</div>
+        </div>
+        <div class="item-price">100/-</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

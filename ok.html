@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f8f8;
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+    }
+
+    .menu-container {
+      width: 80%;
+      max-width: 800px;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    .menu-title {
+      text-align: center;
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .menu-section {
+      margin-bottom: 30px;
+    }
+
+    .menu-section h2 {
+      font-size: 1.5em;
+      color: #d2691e;
+      border-bottom: 2px solid #d2691e;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+    }
+
+    .menu-item {
+      display: flex;
+      align-items: center;
+      
+      margin-bottom: 15px;
+      padding-bottom: 10px;
+      
+    }
+
+    .menu-item img {
+      width: 80px;
+      height: 80px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      margin-right: 15px;
+    }
+
+    .menu-item img:hover {
+      transform: scale(1.1);
+    }
+
+    .item-details {
+      flex-grow: 1;
+    }
+
+    .item-name {
+      font-weight: bold;
+    }
+
+    .item-price {
+      color: #d2691e;
+    }
+
+    
+  </style>
+</head>
+<body>
+  <div class="menu-container">
+    <div class="menu-title">Our Menu</div>
+
+    <div class="menu-section">
+      <h2>Breakfast</h2>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/80" alt="Bruschetta">
+        <div class="item-details">
+          <div class="item-name">Sandwich</div>
+        </div>
+        <div class="item-price">$6.00</div>
+      </div>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/80" alt="Stuffed Mushrooms">
+        <div class="item-details">
+          <div class="item-name">Alo Paratha</div>
+        </div>
+        <div class="item-price">$8.50</div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2>Main Courses</h2>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/80" alt="Grilled Salmon">
+        <div class="item-details">
+          <div class="item-name">Chilli Paneer</div>
+        </div>
+        <div class="item-price">$18.00</div>
+      </div>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/80" alt="Pasta Primavera">
+        <div class="item-details">
+          <div class="item-name">Spicy Pasta</div>
+        </div>
+        <div class="item-price">$14.00</div>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <h2>Desserts</h2>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/80" alt="Cheesecake">
+        <div class="item-details">
+          <div class="item-name">Cheesecake</div>
+        </div>
+        <div class="item-price">$7.00</div>
+      </div>
+      <div class="menu-item">
+        <img src="https://via.placeholder.com/80" alt="Chocolate Mousse">
+        <div class="item-details">
+          <div class="item-name">Pancake</div>
+        </div>
+        <div class="item-price">$6.50</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

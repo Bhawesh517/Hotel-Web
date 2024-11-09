@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+        font-family: Arial, sans-serif;
+      }
+         a{
+     text-decoration: none;
+     color: black;
+    }
+    li{
+      list-style: none;
+      display: inline;
+      padding: 16px;
+    }
+    #div2{
+      margin-left: 60%;
+      margin-top: -1.75%;
+    }
+    #div1{
+      margin-left: 5%;
+      margin-top: 15px;
+      font-size: 30px;
+    }
+    #Main{
+      border: 1px solid gainsboro;
+      height: 70px;
+      background-color: gainsboro;
+      margin-top: -7.5px;
+    }
+
+    
+
+    .availability-form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      max-width: 300px;
+      width: 100%;
+      margin-left: 65%;
+      margin-top: 5%;
+      position: absolute;
+    }
+
+    .availability-form h2 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      color: #555;
+      margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 90%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .form-group select {
+      appearance: none;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #4CAF50;
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #45a049;
+    }
+
+    #inform{
+        margin-top: 10%;
+        margin-left: 10%;
+        position: absolute;
+    }
+    #inform h3{
+      color: white;
+    }
+    
+    #inform p{
+        font-size: 45px;
+        margin-top: -0.5%;
+        color: white
+    }
+    #explore{
+        border-radius: 10px;
+        font-size: large;
+        border: 1px solid rgb(194, 187, 187);
+        margin-top: -1px;
+    }
+    #explore:hover{
+        transform: scale(1.15);
+    }
+    #image{
+      
+      margin-left: 0.125%;
+    }
+    img{
+      width: 1500px;
+    }
+    
+
+
+
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div id="Main">
+            <div id="div1">SkyDeck</div>
+            <div id="div2">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="room.html">Rooms</a></li>
+              <li><a href="restaurant.html">Restaurant</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </div>
+          </div>
+    </header>
+    <div class="availability-form">
+        <h2>Check Availability</h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="check-in">Check-in</label>
+            <input type="date" id="check-in" name="check-in" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="check-out">Check-out</label>
+            <input type="date" id="check-out" name="check-out" required>
+          </div>
+      
+          <div class="form-group">
+            <label for="room-type">Room</label>
+            <select id="room-type" name="room-type" required>
+              <option value="single">Single</option>
+              <option value="double">Double</option>
+              <option value="suite">Suite</option>
+            </select>
+          </div>
+      
+          <div class="form-group">
+            <label for="guests">Guests</label>
+            <select id="guests" name="guests" required>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+      
+          <button type="submit" class="submit-btn">Check Availability</button>
+        </form>
+    </div>
+
+      <div id="inform">
+        <h3>Simple - Unique - Friendly</h3>
+        <p>Make Yourself At Home<br>
+           In Our Hotel
+        </p>
+        <button id="explore">Explore</button>
+      </div>
+
+      <div id="image">
+        <img src="image/photo.jpg" alt="image">
+      </div>
+     
+</body>
+</html>

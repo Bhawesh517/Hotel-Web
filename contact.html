@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <style>
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    .contact-section {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .contact-info {
+      margin-bottom: 30px;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 15px;
+      color: #444;
+    }
+
+    .contact-info p {
+      margin-bottom: 10px;
+      color: #555;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .form-group textarea {
+      resize: vertical; 
+    }
+
+    .submit-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s;
+    }
+
+    .submit-button:hover {
+      background-color: #0056b3;
+    }
+
+    
+    .contact-image {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .contact-image img {
+      max-width: 100%; 
+      height: auto; 
+      border-radius: 8px; 
+    }
+    a{
+      text-decoration: none;
+      color: black;
+    }
+    li{
+      list-style: none;
+      display: inline;
+      padding: 16px;
+    }
+    #div2{
+      margin-left: 60%;
+      margin-top: -1.75%;
+    }
+    #div1{
+      margin-left: 5%;
+      margin-top: 15px;
+      font-size: 30px;
+    }
+    #Main{
+      border: 1px solid gainsboro;
+      height: 70px;
+      background-color: gainsboro;
+    }
+    .error{
+        color: red;
+        font-size: 18px;
+        font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div id="Main">
+    <div id="div1">SkyDeck</div>
+    <div id="div2">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="room.html">Rooms</a></li>
+      <li><a href="restaurant.html">Restaurant</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <h1>Contact Us</h1>
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p><strong>Address:</strong> 123 Main Street, City, Country</p>
+      <p><strong>Phone:</strong> (123) 456-7890</p>
+      <p><strong>Email:</strong> info@gmail.com</p>
+    </div>
+
+    <form onsubmit="return(sub())" name="myform" class="contact-form">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" onkeyup="validateName()">
+        <span class="error" id="nameerror"></span>
+        <div class="message" id="nameMessage"></div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" onkeyup="validateEmail()">
+        <span class="error" id="emailerror"></span>
+        <div class="message" id="emailMessage"></div>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" rows="5" placeholder="Your Message"></textarea>
+      </div>
+      <button type="submit" class="submit-button">Send Message</button>
+    </form>
+  </div>
+  <script>
+    function sub(){
+            var isvalid = true;
+            if(document.getElementById('name').value==""){
+                document.getElementById('nameerror').innerText = "can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('nameerror').innerText = "";
+            }
+            if(document.getElementById('email').value==""){
+                document.getElementById('emailerror').innerText = "can't be empty";
+                isvalid = false;
+            }
+            else{
+                document.getElementById('emailerror').innerText = "";
+            }
+            return isvalid;
+          }
+
+          function validateName(){
+    const name = document.getElementById("name").value;
+    const nameInput = document.getElementById("name");
+    const nameMessage = document.getElementById("nameMessage");
+    if(name.length >=3){
+        nameInput.style.borderColor = "green";
+        nameMessage.textContent = "Name looks good";
+        nameMessage.style.color = "green";
+        return true;
+    }
+    else{
+        nameInput.style.borderColor = "red";
+        nameMessage.textContent = "Name should be at least of 3 characters";
+        nameMessage.style.color = "red";
+        return false
+    }
+}
+
+function validateEmail(){
+    const email = document.getElementById("email").value;
+    const emailInput = document.getElementById("email");
+    const emailMessage = document.getElementById("emailMessage");
+    const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    if(emailPattern.test(email)){
+        emailInput.style.borderColor = "green";
+        emailMessage.textContent = "valid email";
+        emailMessage.style.color = "green";
+        return true;
+    }
+    else{
+        emailInput.style.borderColor = "red";
+        emailMessage.textContent = "Enter a valid email address";
+        emailMessage.style.color = "red";
+        return false
+    }
+}
+  </script>
+
+</body>
+</html>
